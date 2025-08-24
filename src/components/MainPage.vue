@@ -19,40 +19,50 @@ const isMobile = window.screen.height > window.screen.width
 function fetchEvents() {
   return [
     {
-        "title": "Jeux libres",
-        "description": "Durant tout l'événement, nos bénévoles sont à votre disposition pour vous aider à choisir, et comprendre, les jeux mis à dispositions pour l'occasion par l'association, ainsi que par l'Ornithorynque et le Ludesco.",
+        "title": "Des Jeux libres",
+        "description": "Durant tout l'événement, nos bénévoles sont à votre disposition pour vous aider à choisir, et comprendre, les jeux mis à dispositions pour l'occasion par l'association, l'Ornithorynque et le Ludesco.",
         "subscribed": 0,
         "max": 0,
         "link": "https://perdu.com",
         "link_text": "s'inscrire",
+        "show_link": false,
+        "show_subscribed": false
+    },
+    {
+        "title": "Du Jeu de Rôle",
+        "description": "Vous n'êtes pas sur la bonne page si vous souhaitez vous inscrire aux tables de jeux de rôle, mais on m'a demandé de vous informer ici que durant tout l'événement, diverses aventures et scénarios épiques vous seront proposés par nos maîtres de jeux.",
+        "subscribed": 0,
+        "max": 0,
+        "link": "https://perdu.com",
+        "link_text": "Aller sur la page d'inscription",
         "show_link": false,
         "show_subscribed": false
     },
     {
         "title": "Loup Garou Géant",
-        "description": "Durant tout l'événement, nos bénévoles sont à votre disposition pour vous aider à choisir, et comprendre, les jeux mis à dispositions pour l'occasion par l'association, ainsi que par l'Ornithorynque et le Ludesco.",
+        "description": "Le plus connu des jeux sociaux arrive ici en version géante. Aux alentours de minuits, trois villages vont se réveiller et tenter de survivre. Resterez vous fidèle à votre village et essayerez vous de gagner là, ou déménagerez-vous vers des horizons plus prospère ? Les inscriptions ouvrent bientôt.",
         "subscribed": 0,
-        "max": 0,
+        "max": 60,
         "link": "https://perdu.com",
         "link_text": "s'inscrire",
         "show_link": false,
-        "show_subscribed": false
+        "show_subscribed": true
     },
     {
     "title": "Tournoi de Magic, the Gathering Duel Commander - 64 places",
     "description": "À 10h30, un tournoi de Magic the Gathering, au format Duel Commander, est organisé. Un prize pool minimum est garanti et l'entrée aux 24h du jeux est incluse dans la finance d'inscription de 30.-.",
     "link": "perdu.com",
-    "prize_wall": "perdu.com",
-    "poster": "perdu.com",
-    "show_link": true,
+    //"prize_wall": "perdu.com",
+    //"poster": "perdu.com",
+    "show_link": false,
     "link_text":"S'inscrire",
     "showsubscribed": false,
     "max": 0,
     "subscribed": 0
     },
     {
-        "title": "Tournoi de One Piece - 64 places",
-        "description": "Durant tout l'événement, nos bénévoles sont à votre disposition pour vous aider à choisir, et comprendre, les jeux mis à dispositions pour l'occasion par l'association, ainsi que par l'Ornithorynque et le Ludesco.",
+        "title": "Tournoi de One Piece TCG - 64 places",
+        "description": "Ouvrant le bal, la communauté One Piece de Neuchâtel propose un tournoi à 64 places. Que vous soyez un nouveau venu où un joueur aguerri, venez tester vos stratégies dans la bonne humeur.",
         "subscribed": 0,
         "max": 0,
         "link": "https://perdu.com",
@@ -61,84 +71,74 @@ function fetchEvents() {
         "show_subscribed": false
     },
     {
-        "title": "Tournoi de Mind Bug",
-        "description": "Durant tout l'événement, nos bénévoles sont à votre disposition pour vous aider à choisir, et comprendre, les jeux mis à dispositions pour l'occasion par l'association, ainsi que par l'Ornithorynque et le Ludesco.",
-        "subscribed": 12,
-        "max": 12,
+        "title": "Tournoi de Mindbug",
+        "description": "Venez vous affronter lors d’un tournoi amical de Mindbug, le jeu à 2 joueurs du créateur de MTG. Que vous soyez un expert des jeux de carte compétitifs ou un amateur de jeux simples mais demandant de la réflexion, vous y trouverez votre compte ! Tentez de sortir vainqueur des 4 manches et remportez des récompenses Mindbug exclusives.",
+        "subscribed": 0,
+        "max": 16,
         "link": "https://perdu.com",
         "link_text": "s'inscrire",
         "show_link": false,
         "show_subscribed": true
     },
     {
-        "title": "Tournoi de Jass",
-        "description": "Durant tout l'événement, nos bénévoles sont à votre disposition pour vous aider à choisir, et comprendre, les jeux mis à dispositions pour l'occasion par l'association, ainsi que par l'Ornithorynque et le Ludesco.",
+        "title": "Tournoi de Jass (Chibre)",
+        "description": "Prêt à montrer vos talents au Chibre (Jass) ? Que vous soyez débutant ou joueur aguerri, affrontez d’autres participants dans une ambiance conviviale et pleine de bonne humeur. Stratégie et éclats de rire au rendez-vous. venez tenter votre chance et décrocher la victoire !",
         "subscribed": 0,
-        "max": 0,
+        "max": 64,
         "link": "https://perdu.com",
         "link_text": "s'inscrire",
-        "show_link": true,
-        "show_subscribed": false
+        "show_link": false,
+        "show_subscribed": true
     },
     {
         "title": "Tournoi d'échecs",
-        "description": "Durant tout l'événement, nos bénévoles sont à votre disposition pour vous aider à choisir, et comprendre, les jeux mis à dispositions pour l'occasion par l'association, ainsi que par l'Ornithorynque et le Ludesco.",
+        "description": "Avec le soutien du club d'échecs de Neuchâtels, un petit tournoi d'échecs vous est proposé. Plus de nouvelles à ce sujet prochainement.",
         "subscribed": 0,
         "max": 0,
         "link": "https://perdu.com",
         "link_text": "s'inscrire",
         "show_link": false,
-        "show_subscribed": true
-    },
-    {
-        "title": "Initiation aux échecs",
-        "description": "Durant tout l'événement, nos bénévoles sont à votre disposition pour vous aider à choisir, et comprendre, les jeux mis à dispositions pour l'occasion par l'association, ainsi que par l'Ornithorynque et le Ludesco.",
-        "subscribed": 5,
-        "max": 12,
-        "link": "https://perdu.com",
-        "link_text": "s'inscrire",
-        "show_link": true,
-        "show_subscribed": true
+        "show_subscribed": false
     },
     {
         "title": "Tournoi de Pierre - Feuille - Ciseau",
-        "description": "Durant tout l'événement, nos bénévoles sont à votre disposition pour vous aider à choisir, et comprendre, les jeux mis à dispositions pour l'occasion par l'association, ainsi que par l'Ornithorynque et le Ludesco.",
+        "description": "À un moment durant la nuit, lorsque la cafféine et la bonne humeur seront les dernières ressources à vous maintenir éveillé·e·s, une petite compétition bon enfant sur un jeu universel et simple vous sera proposé afin de raviver la flamme et vous permettre de tenir jusqu'au matin.",
         "subscribed": 0,
         "max": 0,
         "link": "https://perdu.com",
         "link_text": "Aller sur la page d'inscription",
-        "show_link": true,
-        "show_subscribed": true
+        "show_link": false,
+        "show_subscribed": false
     },
     {
         "title": "Le Grand Quizz de Tard dans la nuit",
-        "description": "Durant tout l'événement, nos bénévoles sont à votre disposition pour vous aider à choisir, et comprendre, les jeux mis à dispositions pour l'occasion par l'association, ainsi que par l'Ornithorynque et le Ludesco.",
+        "description": "Une petite activité nocturne avec des questions plus ou moins sérieuses pour des réponses qui le sont tout autant.",
         "subscribed": 0,
         "max": 0,
         "link": "https://perdu.com",
         "link_text": "Aller sur la page d'inscription",
-        "show_link": true,
-        "show_subscribed": true
+        "show_link": false,
+        "show_subscribed": false
     },
     {
         "title": "Le Draft de Minuit",
-        "description": "Durant tout l'événement, nos bénévoles sont à votre disposition pour vous aider à choisir, et comprendre, les jeux mis à dispositions pour l'occasion par l'association, ainsi que par l'Ornithorynque et le Ludesco.",
+        "description": "Aux alentours de Minuit, les joueur·se·s de magic seront invité·e·s à participer à une ou plusieurs tables de draft nocturnes. Des éditions au thème nocturne, un petit twist durant le draft, voire les parties, des ingrédients parfaits pour une petite expérience hors des formats conventionnels.",
         "subscribed": 0,
         "max": 0,
         "link": "https://perdu.com",
         "link_text": "Aller sur la page d'inscription",
-        "show_link": true,
-        "show_subscribed": true
+        "show_link": false,
+        "show_subscribed": false
     },
     {
-        "title": "Du Jeu de Rôle",
-        "description": "Durant tout l'événement, nos bénévoles sont à votre disposition pour vous aider à choisir, et comprendre, les jeux mis à dispositions pour l'occasion par l'association, ainsi que par l'Ornithorynque et le Ludesco.",
+        "title": "Se Nourrir",
+        "description": "Durant tout l'événements (ou jusqu'à ce que nous n'ayons plus rien), nos bénévoles vous proposent des sandwiches, des croques monsieurs et des boissons à prix modique, ainsi que des patisseries en prix libre.",
         "subscribed": 0,
         "max": 0,
         "link": "https://perdu.com",
         "link_text": "Aller sur la page d'inscription",
-        "show_link": true,
-        "show_subscribed": true
+        "show_link": false,
+        "show_subscribed": false
     },
 ]
 }
