@@ -50,7 +50,7 @@ function fetchEvents() {
     },
     {
     "title": "Tournoi de Magic, the Gathering Duel Commander - 64 places",
-    "description": "À 10h30, un tournoi de Magic the Gathering, au format Duel Commander, est organisé. Un prize pool minimum est garanti et l'entrée aux 24h du jeux est incluse dans la finance d'inscription de 30.-.",
+    "description": "À 10h30, un tournoi de Magic the Gathering, au format Duel Commander, est organisé. Un prize pool minimum est garanti et l'entrée aux 24h du jeu est incluse dans la finance d'inscription de 30.-.",
     "link": "perdu.com",
     //"prize_wall": "perdu.com",
     //"poster": "perdu.com",
@@ -72,7 +72,7 @@ function fetchEvents() {
     },
     {
         "title": "Tournoi de Mindbug",
-        "description": "Venez vous affronter lors d’un tournoi amical de Mindbug, le jeu à 2 joueurs du créateur de MTG. Que vous soyez un expert des jeux de carte compétitifs ou un amateur de jeux simples mais demandant de la réflexion, vous y trouverez votre compte ! Tentez de sortir vainqueur des 4 manches et remportez des récompenses Mindbug exclusives.",
+        "description": "Venez vous affronter lors d’un tournoi amical de Mindbug, le jeu à 2 joueurs du créateur de MTG. Que vous soyez un expert des jeux de carte compétitifs ou un amateur de jeux simples mais demandant de la réflexion, vous y trouverez votre compte ! Tentez de sortir vainqueur des 4 manches et remportez des récompenses Mindbug exclusives. Les inscriptions ouvrent prochainement.",
         "subscribed": 0,
         "max": 16,
         "link": "https://perdu.com",
@@ -82,7 +82,7 @@ function fetchEvents() {
     },
     {
         "title": "Tournoi de Jass (Chibre)",
-        "description": "Prêt à montrer vos talents au Chibre (Jass) ? Que vous soyez débutant ou joueur aguerri, affrontez d’autres participants dans une ambiance conviviale et pleine de bonne humeur. Stratégie et éclats de rire au rendez-vous. venez tenter votre chance et décrocher la victoire !",
+        "description": "Prêt à montrer vos talents au Chibre (Jass) ? Que vous soyez débutant ou joueur aguerri, affrontez d’autres participants dans une ambiance conviviale et pleine de bonne humeur. Stratégie et éclats de rire au rendez-vous. venez tenter votre chance et décrocher la victoire ! Les inscriptions ouvrent prochainement.",
         "subscribed": 0,
         "max": 64,
         "link": "https://perdu.com",
