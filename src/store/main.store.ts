@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { computed, ref } from 'vue';
+import { ref } from 'vue';
 
 // IDEA : keep scroll position so we can return to it.
 /*
