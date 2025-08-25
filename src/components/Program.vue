@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onBeforeMount, onBeforeUnmount, onMounted } from "vue";
+import { computed, onMounted } from "vue";
 import Event from "./Event.vue";
 import { useMainStore } from "../store/main.store";
 
