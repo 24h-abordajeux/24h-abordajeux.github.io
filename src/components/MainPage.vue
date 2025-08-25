@@ -40,7 +40,7 @@ const isMobile = window.screen.height > window.screen.width
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
-  background-image: url('/src/assets/fond_affiche.png');
+  background-image: url('/src/assets/fond_affiche.jpg');
   height: 100vh;
   background-size: auto 100vh;
   background-repeat: no-repeat;
