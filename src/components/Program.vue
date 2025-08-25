@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from "vue";
+import { computed, onBeforeMount, onBeforeUnmount, onMounted } from "vue";
 import Event from "./Event.vue";
-import { fetchEvents } from "../utils/json_fetcher";
 import { useMainStore } from "../store/main.store";
 
 const mainStore = useMainStore()

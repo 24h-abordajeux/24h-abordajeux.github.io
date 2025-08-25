@@ -7,7 +7,6 @@ import PracticalInformations from './PracticalInformations.vue'
 import { useMainStore } from '../store/main.store'
 import Home from './Home.vue'
 import Volunteer from './Volunteer.vue'
-import axios from 'axios'
 
 const mainStore = useMainStore()
 
