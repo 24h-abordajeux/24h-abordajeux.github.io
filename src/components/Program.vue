@@ -29,11 +29,21 @@ onMounted(() => {
         flex-grow: 1;
 
 }
+@media only screen and (max-width:600px) {
+    .program {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width:600px) {
+    .program {
+        width: 60%;
+    }
+}
+
 .program {
     margin: 2vh;
     border: ridge;
-    width: 60%;
-    max-height: 30vh;
     border-color: brown;
     background-color: #00000080;
     &.even {

@@ -11,39 +11,43 @@ function goTo(page: string) {
     mainStore.changePage(page)
 
 }
+
+function buttonSize() {
+    return window.screen.width < 600 || window.screen.height < 600 ? "1x": "2x"
+}
 </script>
 
 
 <template>
     <div class="header">
         <div class="my-1">
-            <button @click="goTo('home')"><FontAwesomeIcon :icon="faHouse" size="2x" v-if="!isLoading"/><FontAwesomeIcon
+            <button @click="goTo('home')"><FontAwesomeIcon :icon="faHouse" :size="buttonSize()" v-if="!isLoading"/><FontAwesomeIcon
                 :icon="faSpinner"
-                size="2x"
+                :size="buttonSize()"
                 pulse
                 v-else
             /></button>
-            <button @click="goTo('events')"><FontAwesomeIcon :icon="faClipboardList" size="2x"v-if="!isLoading"/><FontAwesomeIcon
+            <button @click="goTo('events')"><FontAwesomeIcon :icon="faClipboardList" :size="buttonSize()"v-if="!isLoading"/><FontAwesomeIcon
                 :icon="faSpinner"
-                size="2x"
+                :size="buttonSize()"
                 pulse
                 v-else
             /></button>
-            <button @click="goTo('rpg')"><FontAwesomeIcon :icon="faHatWizard" size="2x"v-if="!isLoading"/><FontAwesomeIcon
+            <button @click="goTo('rpg')"><FontAwesomeIcon :icon="faHatWizard" :size="buttonSize()"v-if="!isLoading"/><FontAwesomeIcon
                 :icon="faSpinner"
-                size="2x"
+                :size="buttonSize()"
                 pulse
                 v-else
             /></button>
-            <button @click="goTo('info')" style="larger"><FontAwesomeIcon :icon="faCircleInfo" size="2x" v-if="!isLoading"/><FontAwesomeIcon
+            <button @click="goTo('info')" style="larger"><FontAwesomeIcon :icon="faCircleInfo" :size="buttonSize()" v-if="!isLoading"/><FontAwesomeIcon
                 :icon="faSpinner"
-                size="2x"
+                :size="buttonSize()"
                 pulse
                 v-else
             /></button>
-            <button @click="goTo('volunteer')"><FontAwesomeIcon :icon="faHandshakeAngle" size="2x"v-if="!isLoading"/><FontAwesomeIcon
+            <button @click="goTo('volunteer')"><FontAwesomeIcon :icon="faHandshakeAngle" :size="buttonSize()"v-if="!isLoading"/><FontAwesomeIcon
                 :icon="faSpinner"
-                size="2x"
+                :size="buttonSize()"
                 pulse
                 v-else
             /></button>
