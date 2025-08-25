@@ -196,10 +196,10 @@ function fetchRpgEvents() {
   }
 }
 .container {
-    overflow-y: scroll;
+    overflow-y: auto;
     width: 100%;
     min-height: 80vh;
-    scrollbar-color: transparent;
+    scrollbar-color: rgba(0,0,0,0.4) rgba(0,0,0,0.1);
   background-color: rgba(0,0,0,0.4);
 }
 .header {  
