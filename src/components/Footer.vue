@@ -15,7 +15,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
             <a href="mailto:association.alabordajeux@gmail.com?subject='24h du Jeu'" target="_blank"><button class="social"><FontAwesomeIcon :icon="faEnvelope" size="2x"/></button></a>
             <a href="https://abordajeux.ch" target="_blank"><button class="social"><FontAwesomeIcon :icon="faGlobe" size="2x" /></button></a>
             </div>
-            <div class="social">Ce site n'utilise aucun cookie et aucun traqueur :) (j'espère) (en tous cas j'en ai pas mis)</div>
+            <div class="social">Ce site n'utilise aucun cookie et aucun traqueur :)</div>
         </div>
 </template>
 

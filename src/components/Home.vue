@@ -19,7 +19,7 @@ function goTo(page: string) {
         Vous trouverez ici des informations sur les activités que nous vous proposerons tout
         au long de l'événement, qu'il s'agisse de nos 
         <span class="fake_link" @click="goTo('rpg')">tables de jeux de rôles</span> ou de nos 
-        <span class="fake_link" @click="goTo('program')">tournois ou jeux plus classiques</span>,
+        <span class="fake_link" @click="goTo('events')">tournois ou jeux plus classiques</span>,
         vous devriez trouver une table prête à lancer une partie qui vous intéresse. Les inscriptions
         ne sont pas encore ouvertes pour toutes les activités, mais celà devrait changer dans les prochains jours.
     </div>

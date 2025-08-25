@@ -1,12 +1,14 @@
 <script setup lang="ts">
+import { computed, onMounted, ref } from "vue";
 import Event from "./Event.vue";
+import { fetchEvents } from "../utils/json_fetcher";
+import { useMainStore } from "../store/main.store";
 
-    defineProps({
-        events: {
-            type: Array<Object>,
-                default: []
-        }
-    })
+const mainStore = useMainStore()
+const events = computed(() => mainStore.events)
+onMounted(() => {
+    mainStore.getEvents()
+})
 
 </script>
 
@@ -47,5 +49,6 @@ import Event from "./Event.vue";
     margin-right: 1vw;
     }
     flex-direction: row;
+    overflow-y: auto;
 }
 </style>

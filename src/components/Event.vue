@@ -34,7 +34,6 @@ defineProps({
     font-size: large;
 }
 .event_description {
-    overflow-y: scroll;
     width: 100%;
     max-height: 25vh;
     margin-bottom: 2px;

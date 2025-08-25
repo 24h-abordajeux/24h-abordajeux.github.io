@@ -2,11 +2,14 @@
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { useMainStore } from '../store/main.store'
-import { faCircleInfo, faClipboardList, faHandshakeAngle, faHatWizard, faHouse} from '@fortawesome/free-solid-svg-icons'
+import { faCircleInfo, faClipboardList, faHandshakeAngle, faHatWizard, faHouse, faSpinner} from '@fortawesome/free-solid-svg-icons'
+import { computed } from 'vue'
 
 const mainStore = useMainStore()
+const isLoading = computed(() => mainStore.isLoading)
 function goTo(page: string) {
     mainStore.changePage(page)
+
 }
 </script>
 
@@ -14,11 +17,36 @@ function goTo(page: string) {
 <template>
     <div class="header">
         <div class="my-1">
-            <button @click="goTo('home')"><FontAwesomeIcon :icon="faHouse" size="2x" /></button>
-            <button @click="goTo('program')"><FontAwesomeIcon :icon="faClipboardList" size="2x"/></button>
-            <button @click="goTo('rpg')"><FontAwesomeIcon :icon="faHatWizard" size="2x"/></button>
-            <button @click="goTo('info')" style="larger"><FontAwesomeIcon :icon="faCircleInfo" size="2x" /></button>
-            <button @click="goTo('volunteer')"><FontAwesomeIcon :icon="faHandshakeAngle" size="2x"/></button>
+            <button @click="goTo('home')"><FontAwesomeIcon :icon="faHouse" size="2x" v-if="!isLoading"/><FontAwesomeIcon
+                :icon="faSpinner"
+                size="2x"
+                pulse
+                v-else
+            /></button>
+            <button @click="goTo('events')"><FontAwesomeIcon :icon="faClipboardList" size="2x"v-if="!isLoading"/><FontAwesomeIcon
+                :icon="faSpinner"
+                size="2x"
+                pulse
+                v-else
+            /></button>
+            <button @click="goTo('rpg')"><FontAwesomeIcon :icon="faHatWizard" size="2x"v-if="!isLoading"/><FontAwesomeIcon
+                :icon="faSpinner"
+                size="2x"
+                pulse
+                v-else
+            /></button>
+            <button @click="goTo('info')" style="larger"><FontAwesomeIcon :icon="faCircleInfo" size="2x" v-if="!isLoading"/><FontAwesomeIcon
+                :icon="faSpinner"
+                size="2x"
+                pulse
+                v-else
+            /></button>
+            <button @click="goTo('volunteer')"><FontAwesomeIcon :icon="faHandshakeAngle" size="2x"v-if="!isLoading"/><FontAwesomeIcon
+                :icon="faSpinner"
+                size="2x"
+                pulse
+                v-else
+            /></button>
         </div>   
     </div>
 </template>
