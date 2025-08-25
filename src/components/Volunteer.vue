@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useMainStore } from '../store/main.store';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 const mainStore = useMainStore()
 const hasVolunteered = computed(() => mainStore.volunteer)
 function becomeVolunteer() {
     mainStore.becomeVolunteer()
-    // TODO : link to volunteer form
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSc6PLMue4VWflzc2dVPrb9bSnR4rwahI3-qOhHN7-cHXE6GiQ/viewform?usp=dialog', '_blank')
 }
 </script>
 
@@ -18,6 +20,11 @@ function becomeVolunteer() {
     </div>
     <button v-if="!hasVolunteered" @click="becomeVolunteer()">Devenir bénévole</button>
     <div v-else class="volunteer">Merci beaucoup de votre soutien :)</div>
+    <div class="home">
+        Si vous avez des questions vis à vis du travail de bénévole, ou que vous êtes déjà bénévoles et que vous
+        avez besoin de nous contacter, vous pouvez le faire ici.
+    </div>
+    <a href="mailto:24hdesbenevoles@pm.me" ><button class="social"><FontAwesomeIcon :icon="faEnvelope" size="2x"/></button></a>
 </template>
 
 <style lang="scss" scoped>
@@ -30,6 +37,7 @@ function becomeVolunteer() {
 }
 .volunteer {
     margin-top: 1vh;
+    margin-bottom: 1vh;
     color: aliceblue;
     font-weight: 600;
 }

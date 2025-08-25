@@ -62,7 +62,7 @@ function fetchEvents() {
     },
     {
         "title": "Tournoi de One Piece TCG - 64 places",
-        "description": "Ouvrant le bal, la communauté One Piece de Neuchâtel propose un tournoi à 64 places. Que vous soyez un nouveau venu où un joueur aguerri, venez tester vos stratégies dans la bonne humeur.",
+        "description": "Ouvrant le bal dès 10h, la communauté One Piece de Neuchâtel propose un tournoi à 64 places. Que vous soyez un nouveau venu où un joueur aguerri, venez tester vos stratégies dans la bonne humeur.",
         "subscribed": 0,
         "max": 0,
         "link": "https://perdu.com",
@@ -81,7 +81,7 @@ function fetchEvents() {
         "show_subscribed": true
     },
     {
-        "title": "Tournoi de Jass (Chibre)",
+        "title": "Tournoi de Chibre (Jass)",
         "description": "Prêt à montrer vos talents au Chibre (Jass) ? Que vous soyez débutant ou joueur aguerri, affrontez d’autres participants dans une ambiance conviviale et pleine de bonne humeur. Stratégie et éclats de rire au rendez-vous. venez tenter votre chance et décrocher la victoire ! Les inscriptions ouvrent prochainement.",
         "subscribed": 0,
         "max": 64,
@@ -189,8 +189,6 @@ function fetchRpgEvents() {
     width: 100%;
     height: 100%;
   }
-  &.mobile {
-  }
   &.desktop{
     max-width: 80vh;
     margin-left: auto;
@@ -198,10 +196,10 @@ function fetchRpgEvents() {
   }
 }
 .container {
-    overflow: scroll;
+    overflow-y: scroll;
     width: 100%;
     min-height: 80vh;
-
+    scrollbar-color: transparent;
   background-color: rgba(0,0,0,0.4);
 }
 .header {  
@@ -213,7 +211,7 @@ function fetchRpgEvents() {
 .content {
   flex: 0, 0, 80vh;
   min-height: 80vh;
-  overflow-y: scroll;
+  overflow: hidden;
 
 }
 .footer {
