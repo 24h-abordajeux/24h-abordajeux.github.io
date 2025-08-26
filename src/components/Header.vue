@@ -21,12 +21,7 @@ function buttonSize() {
 <template>
     <div class="header">
         <div class="my-1">
-            <button @click="goTo('home')"><FontAwesomeIcon :icon="faHouse" :size="buttonSize()" v-if="!isLoading"/><FontAwesomeIcon
-                :icon="faSpinner"
-                :size="buttonSize()"
-                pulse
-                v-else
-            /></button>
+            <button @click="goTo('home')"><FontAwesomeIcon :icon="faHouse" :size="buttonSize()"/></button>
             <button @click="goTo('events')"><FontAwesomeIcon :icon="faClipboardList" :size="buttonSize()"v-if="!isLoading"/><FontAwesomeIcon
                 :icon="faSpinner"
                 :size="buttonSize()"
@@ -39,18 +34,8 @@ function buttonSize() {
                 pulse
                 v-else
             /></button>
-            <button @click="goTo('info')" style="larger"><FontAwesomeIcon :icon="faCircleInfo" :size="buttonSize()" v-if="!isLoading"/><FontAwesomeIcon
-                :icon="faSpinner"
-                :size="buttonSize()"
-                pulse
-                v-else
-            /></button>
-            <button @click="goTo('volunteer')"><FontAwesomeIcon :icon="faHandshakeAngle" :size="buttonSize()"v-if="!isLoading"/><FontAwesomeIcon
-                :icon="faSpinner"
-                :size="buttonSize()"
-                pulse
-                v-else
-            /></button>
+            <button @click="goTo('info')" style="larger"><FontAwesomeIcon :icon="faCircleInfo" :size="buttonSize()"/></button>
+            <button @click="goTo('volunteer')"><FontAwesomeIcon :icon="faHandshakeAngle" :size="buttonSize()"/></button>
         </div>   
     </div>
 </template>

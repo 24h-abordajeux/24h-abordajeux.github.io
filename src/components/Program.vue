@@ -1,13 +1,10 @@
 <script setup lang="ts">
-import { computed, onMounted } from "vue";
+import { computed } from "vue";
 import Event from "./Event.vue";
 import { useMainStore } from "../store/main.store";
 
 const mainStore = useMainStore()
-const events = computed(() => mainStore.events)
-onMounted(() => {
-    mainStore.getEvents()
-})
+const events = computed(() => mainStore.getEvents())
 
 </script>
 

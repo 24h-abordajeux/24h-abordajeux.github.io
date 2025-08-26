@@ -13,10 +13,10 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
                     Cité des étudiants, Avenue Clos Brochet 10, 2000 Neuchâtel
                 </li>
                 <li>
-                    Début à 10h du matin le samedi 3 octobre 2025
+                    Début à 10h du matin le samedi 4 octobre 2025
                 </li>
                 <li>
-                    Fin à 10h du matin le dimanche 4 octobre 2025
+                    Fin à 10h du matin le dimanche 5 octobre 2025
                 </li>
             </ul>
             <div class="subtitle">Prix d'entrée</div>
@@ -25,13 +25,13 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
                     <FontAwesomeIcon :icon="faTriangleExclamation" /> L'événement est cashless.
                 </li>
                 <li>
-                    Adultes : <span class="right-align mg-r-2">15 CHF / personne</span> 
+                    Adultes : <span class="right-align mg-r-2">15 CHF par personne</span> 
                 </li>
                 <li>
-                    AI / AVS / Chômeurs / Etudiants: <span class="right-align mg-r-2">10 CHF / personne</span>
+                    AI / AVS / Chômeurs / Etudiants: <span class="right-align mg-r-2">10 CHF par personne</span>
                 </li>
                 <li>
-                    Enfants entre 8 et 16 ans / membres de À L'ABORDAJEUX: <span class="right-align mg-r-2">8 CHF / personne</span>
+                    Enfants entre 8 et 16 ans / membres de À L'ABORDAJEUX: <span class="right-align mg-r-2">8 CHF par personne</span>
                 </li>
                 <li>
                     Enfants plus jeunes: Gratuit
@@ -40,10 +40,10 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
             </ul>
              <div class="subtitle">Manger et Boire pendant l'événement</div>
             <div class="left-align mg-l-2">
-                Des sandwiches, des croques monsieurs et un bar sont à votre disposition pendant tout l'événement pour une somme modique.
+                Des sandwiches, des Croques-monsieurs et un bar seront à votre disposition pendant tout l'événement pour une somme modique.
             </div>
             <div class="left-align mg-l-2">
-                Des Pâtisseries seront en vente à prix libre jusqu'à ce que vous ayez tout mangé.
+                Des pâtisseries seront en vente à prix libre jusqu'à ce que vous ayez tout mangé.
             </div>
         </div>
        

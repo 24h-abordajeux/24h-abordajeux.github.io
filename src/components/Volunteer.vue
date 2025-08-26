@@ -15,13 +15,13 @@ function becomeVolunteer() {
 <template>
     <div class="home">
         Les 24h du jeu ne pourront pas tourner sans un équipage nombreux et motivé.
-        Nous serions heureux de vous compter parmis nous. Si d'aventure vous souhaiteriez contribuer,
-        vous pouvez nous écrire vos disponibilités, et vous profiterez alors de l'événement des deux côtés :)
+        Nous serions heureux de vous compter parmi nous. Si d'aventure vous souhaiteriez contribuer,
+        vous pouvez nous donner vos disponibilités, et vous profiterez alors également des coulisses de l'événement. :)
     </div>
     <button v-if="!hasVolunteered" @click="becomeVolunteer()">Devenir bénévole</button>
     <div v-else class="volunteer">Merci beaucoup de votre soutien :)</div>
     <div class="home">
-        Si vous avez des questions vis à vis du travail de bénévole, ou que vous êtes déjà bénévoles et que vous
+        Si vous avez des questions concernant le travail de bénévole, ou que vous êtes déjà bénévole et que vous
         avez besoin de nous contacter, vous pouvez le faire ici.
     </div>
     <a href="mailto:24hdesbenevoles@pm.me" ><button class="social"><FontAwesomeIcon :icon="faEnvelope" size="2x"/></button></a>

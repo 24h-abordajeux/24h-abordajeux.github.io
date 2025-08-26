@@ -7,30 +7,31 @@ function goTo(page: string) {
     mainStore.changePage(page)
 }
 
+
 </script>
 
 <template>
     <div class="home">
-        Mesdames, Messieurs, l'abordajeux a le plaisir de vous convier aux 24h du jeu.
+        Mesdames, Messieurs, l'association À L'ABORDAJEUX a le plaisir de vous convier aux 24h du jeu.
         Que vous soyez des joueur·euse·s confirmé·e·s ou des novices en quête d'une activité
-        pour le week end du 3 au 4 octobre, vous êtes les bienvenu·e·s parmis nous.
+        pour le week end du 4 au 5 octobre, vous êtes les bienvenu·e·s parmi nous.
     </div>
     <div class="home">
         Vous trouverez ici des informations sur les activités que nous vous proposerons tout
         au long de l'événement, qu'il s'agisse de nos 
         <span class="fake_link" @click="goTo('rpg')">tables de jeux de rôles</span> ou de nos 
-        <span class="fake_link" @click="goTo('events')">tournois ou jeux plus classiques</span>,
+        <span class="fake_link" @click="goTo('events')">tournois et jeux plus classiques</span>,
         vous devriez trouver une table prête à lancer une partie qui vous intéresse. Les inscriptions
-        ne sont pas encore ouvertes pour toutes les activités, mais celà devrait changer dans les prochains jours.
+        ne sont pas encore ouvertes pour toutes les activités, mais cela devrait changer dans les prochains jours.
     </div>
     <div class="home">
         Si vous souhaitez venir, vous trouverez toutes les 
-        <span class="fake_link" @click="goTo('info')">informations ici</span>, et si d'aventure vous voudriez
+        <span class="fake_link" @click="goTo('info')">informations ici</span>, et si d'aventure vous aimeriez
         rejoindre l'équipage en tant que <span class="fake_link" @click="goTo('volunteer')">bénévole</span> pour
         quelques heures, sachez que vous aurez toute notre reconnaissance.
     </div>
     <div class="home">
-        L'abordajeux se réjouit d'ors et déjà de vous retrouver à la cité des étudiants, à Neuchâtel. 
+        L'association À L'ABORDAJEUX se réjouit d'ores et déjà de vous retrouver à la cité des étudiants, à Neuchâtel. 
     </div>
 </template>
 

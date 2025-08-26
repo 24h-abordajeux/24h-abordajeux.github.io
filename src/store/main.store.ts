@@ -1,26 +1,8 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue';
-// IDEA : keep scroll position so we can return to it.
 /*
-tournoi échecs et animation échecs / jass / mind bug / magic / one piece
-	- inscriptions à l'avance
-succès
-jeux de rôles:
-	- besoin des scénarios
-	- inscriptions pour JDR
 
-échecs:
-jass :
-mind bug:
-magic:
-One piece:
-JDR:
-
-
-bénévoles sur le site
-
-
-
+TODO CHOISIR : loading on startup et charger une fois le JSON, ou recharger le JSON à chaque fois
 
 
 
@@ -40,36 +22,63 @@ async function fetchEvents(param: String) {
 
 export const useMainStore = defineStore('main', () => {
 
-
     const PAGES = ["home", "events", "rpg", "info", "volunteer"]
     // state
     const page = ref("home")
+    const volunteer = ref(false)
+    const isLoading = ref(true)
+    const events = ref([])
+    const rpgs = ref([])
+    
     function changePage(newPage: string) {
         if (PAGES.includes(newPage) && page.value !== newPage) {
             page.value = newPage
         }
+        if (page.value === 'events' || page.value === 'rpg') {
+            refreshEvents(page.value)
+        }
     }
-    const volunteer = ref(false)
+
     function becomeVolunteer() {
         volunteer.value = true
     }
 
-    const events = ref([])
-    const isLoading = ref(false)
-    async function getEvents() {
-        isLoading.value = true
-        await fetchEvents(page.value).then((value) => events.value = value)
+    async function refreshEvents(page: string) {
+        fetchEvents(page).then((value) => {
+            if (page === 'events') {
+                events.value = value}
+            else if (page === 'rpg') {
+                rpgs.value = value
+            }    
+        })
+        
+
+    }
+
+    async function initEvents() {
+        await fetchEvents('events').then((value) => events.value = value)
+        await fetchEvents('rpg').then((value) => rpgs.value = value)
         isLoading.value = false
     }
 
+    function getEvents() {
+        if (page.value === 'events') {
+            return events.value
+        }
+        else if ( page.value === 'rpg')
+             {
+                return rpgs.value
+            }
+        return []
+        }
     return {
         PAGES,
         page,
         isLoading,
         volunteer,
-        events,
-        changePage,
         getEvents,
+        initEvents,
+        changePage,
         becomeVolunteer,
     }
 

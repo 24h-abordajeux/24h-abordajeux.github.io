@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, onBeforeMount, ref } from 'vue'
 import Header from './Header.vue'
 import Footer from './Footer.vue'
 import Program from './Program.vue'
@@ -11,8 +11,10 @@ import Volunteer from './Volunteer.vue'
 const mainStore = useMainStore()
 
 const page = computed(() => mainStore.page)
-const isMobile = window.screen.height > window.screen.width
-
+const isMobile = ref(window.screen.height > window.screen.width)
+onBeforeMount(() => {
+  mainStore.initEvents()
+})
 
 </script>
 
