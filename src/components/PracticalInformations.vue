@@ -40,7 +40,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
             </ul>
              <div class="subtitle">Manger et Boire pendant l'événement</div>
             <div class="left-align mg-l-2">
-                Des sandwiches, des Croques-monsieurs et un bar seront à votre disposition pendant tout l'événement pour une somme modique.
+                Des sandwiches, des croque-monsieur et un bar seront à votre disposition pendant tout l'événement pour une somme modique.
             </div>
             <div class="left-align mg-l-2">
                 Des pâtisseries seront en vente à prix libre jusqu'à ce que vous ayez tout mangé.
@@ -48,7 +48,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
         </div>
        
         <div class="map">
-            <div class="subtitle">Plan d'acces</div>
+            <div class="subtitle">Plan d'accès</div>
             <iframe src="https://map.geo.admin.ch/#/embed?lang=en&noSimpleZoom&center=2562240.15,1205173.32&z=11&topic=ech&layers=KML%7Chttps://public.geo.admin.ch/api/kml/files/zteA8GfWSGK7WpSNa4k8ng&bgLayer=ch.swisstopo.pixelkarte-grau&featureInfo=default" style="border: 0;width: 90%;height: 70vh;max-width: 90%;max-height: 70vh;" allow="geolocation"></iframe>
         </div>
     </div>
