@@ -1,26 +1,27 @@
 <script setup lang="ts">
-import { faCircle, faClose } from '@fortawesome/free-solid-svg-icons';
+import { faCircle, faClose, faGem } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
- // <FontAwesomeIcon :icon="faClipboard" />
-const extraInfo = {
-    title: "Format du tournoi",
-    content: [
-    "Ronde suisse suivie d'un Top Cut avec les 8 meilleurs joueurs",
-    "Maximum 64 joueurs",
-    "Chaque participant reçoit 3 boosters PRB02 + 1 booster promo",
-    "Les 8 meilleurs joueurs repartiront avec des récompenses supplémentaires !",
-    ]
-}
-function close() {
+import { useMainStore } from '../store/main.store';
+import { computed } from 'vue';
 
+const mainStore = useMainStore()
+const infoDisplayed = computed(() => mainStore.tournamentExtraInfo)
+
+function close() {
+    mainStore.setTournamentInfo(null)
 }
 </script>
 
 <template>
     <div class="popup">
-        <div class="title"><span> {{ extraInfo.title }} </span><button class="close"><FontAwesomeIcon :icon="faClose" size="xl"/></button></div>
-        <div class="content" v-for="schtroumpf in extraInfo.content"><FontAwesomeIcon :icon="faCircle" size="2xs" /> {{ schtroumpf }}</div>
+        <div class="title"><div class="internal"> {{ infoDisplayed?.title }} </div><div><button class="close" @click="close()"><FontAwesomeIcon :icon="faClose" size="xl"/></button></div></div>
+        <div class="content" v-for="value in infoDisplayed?.content"><FontAwesomeIcon :icon="faCircle" size="2xs" /> {{ value }}</div>
+        <div class="content prizes" v-for="prize, key in infoDisplayed?.prizes">
+            <div class="gras"><FontAwesomeIcon :icon="faGem" />{{ key }}</div>
+            <div v-for="value in prize" class="prizepool"> {{ value }}</div>
+        </div>
     </div>
+
 </template>
 
 <style lang="scss" scoped>
@@ -39,21 +40,35 @@ function close() {
     max-width: 70vw;
 }
 .title {
-    display: grid;
-    grid-template-columns: 90% 10%;
+    display: flex;
+    flex-flow: row;
+    width: 100%;
     background-color: rgba(8, 3, 133, 0.4);
     margin-bottom: 1vh;
 }
-.title > span {
+.internal{
     text-align: left;
     font-weight: 800;
     font-size: large;
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 1vw;
+    flex-grow: 5;
 }
 .content {
     text-align: left;
     margin-left: 1vw;
+    margin-bottom: 1vh;
+        margin-right: 1vw;
+
+}
+.content > button {
+    margin-right: 1vw;
+}
+.gras {
+    margin-left: 1vw;
+}
+.prizepool {
+    margin-left: 3vw;
 }
 </style>

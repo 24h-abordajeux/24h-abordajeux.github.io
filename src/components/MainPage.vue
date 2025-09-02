@@ -13,7 +13,7 @@ const mainStore = useMainStore()
 const page = computed(() => mainStore.page)
 const isMobile = ref(window.screen.height > window.screen.width)
 onBeforeMount(() => {
-  mainStore.initEvents()
+  mainStore.initActivities()
 })
 
 </script>
@@ -65,7 +65,7 @@ onBeforeMount(() => {
     scrollbar-color: rgba(0,0,0,0.4) rgba(0,0,0,0.1);
   background-color: rgba(0,0,0,0.4);
 }
-.header {  
+.header {
   flex: 0,0, 10vh;
   min-height: 10vh;
 

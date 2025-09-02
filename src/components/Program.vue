@@ -1,18 +1,18 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import Event from "./Event.vue";
+import Activity from "./Activity.vue";
 import { useMainStore } from "../store/main.store";
 
 const mainStore = useMainStore()
-const events = computed(() => mainStore.getEvents().filter((event) => event.show_event))
+const activities = computed(() => mainStore.getActivities().filter((activity) => activity?.show_event))
 
 </script>
 
 <template>
-    <div class="forceflex" :style="`height: ${(events.length - 1 * 30)}vh;`">
+    <div class="forceflex" :style="`height: ${(activities.length - 1 * 30)}vh;`">
 
-    <div v-for="(event,index) in events" :class="`program ${index%2 ? 'even' : 'odd'}`">
-        <Event :event="event" />
+    <div v-for="(activity,index) in activities" :class="`program ${index%2 ? 'even' : 'odd'}`">
+        <Activity :activity="activity" />
 
     </div>
     </div>

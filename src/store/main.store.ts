@@ -1,8 +1,9 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue';
+import { EXTRAINFOS, EXTRAINFOS_KEYS, PAGES } from '../utils/config';
 
 const scriptUrl = 'https://script.google.com/macros/s/AKfycbzeX6JzaymaT_ApdxDNRO7BCpX2JUkofyQQH-cyR4MdsnSOK27__fB37YZC2P-YVQeytw/exec?'
-async function fetchEvents(param: String) {
+async function fetchActivities(param: String) {
     const promise = await fetch(scriptUrl + param, {method: 'GET', redirect: 'follow', headers: {origin: '24h.abordajeux.ch'}})
             .then(response => {return response.json()})
             .catch(responseJson => {
@@ -13,21 +14,29 @@ async function fetchEvents(param: String) {
     }
 
 export const useMainStore = defineStore('main', () => {
-
-    const PAGES = ["home", "events", "rpg", "info", "volunteer"]
     // state
     const page = ref("home")
     const volunteer = ref(false)
     const isLoading = ref(true)
-    const events = ref([])
+    const activities = ref([])
     const rpgs = ref([])
+    const tournamentExtraInfo= ref(null)
+
+    function setTournamentInfo(identifier: string | null) {
+        if (!identifier){
+            tournamentExtraInfo.value = null
+        }
+        else if (EXTRAINFOS_KEYS.includes(identifier)) {
+            tournamentExtraInfo.value = EXTRAINFOS[identifier]
+        }
+    }
 
     function changePage(newPage: string) {
         if (PAGES.includes(newPage) && page.value !== newPage) {
             page.value = newPage
         }
         if (page.value === 'events' || page.value === 'rpg') {
-            refreshEvents(page.value)
+            refreshactivities(page.value)
         }
     }
 
@@ -35,10 +44,10 @@ export const useMainStore = defineStore('main', () => {
         volunteer.value = true
     }
 
-    async function refreshEvents(page: string) {
-        fetchEvents(page).then((value) => {
+    async function refreshactivities(page: string) {
+        fetchActivities(page).then((value) => {
             if (page === 'events') {
-                events.value = value}
+                activities.value = value}
             else if (page === 'rpg') {
                 rpgs.value = value
             }
@@ -47,15 +56,15 @@ export const useMainStore = defineStore('main', () => {
 
     }
 
-    async function initEvents() {
-        await fetchEvents('events').then((value) => events.value = value)
-        await fetchEvents('rpg').then((value) => rpgs.value = value)
+    async function initActivities() {
+        await fetchActivities('events').then((value) => activities.value = value)
+        await fetchActivities('rpg').then((value) => rpgs.value = value)
         isLoading.value = false
     }
 
-    function getEvents(): [] {
+    function getActivities(): Object[] {
         if (page.value === 'events') {
-            return events.value
+            return activities.value
         }
         else if ( page.value === 'rpg')
              {
@@ -63,15 +72,19 @@ export const useMainStore = defineStore('main', () => {
             }
         return []
         }
+
+
+
     return {
-        PAGES,
         page,
         isLoading,
         volunteer,
-        getEvents,
-        initEvents,
+        tournamentExtraInfo,
+        getActivities,
+        initActivities,
         changePage,
         becomeVolunteer,
+        setTournamentInfo,
     }
 
 })
