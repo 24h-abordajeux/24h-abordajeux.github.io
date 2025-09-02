@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
-import { ref } from 'vue';
-import { EXTRAINFOS, EXTRAINFOS_KEYS, PAGES } from '../utils/config';
+import { ref, type Ref } from 'vue';
+import { EXTRAINFOS, PAGES, type ActivityObject, type AdditionalContent, type AllowedKeys } from '../utils/config';
 
 const scriptUrl = 'https://script.google.com/macros/s/AKfycbzeX6JzaymaT_ApdxDNRO7BCpX2JUkofyQQH-cyR4MdsnSOK27__fB37YZC2P-YVQeytw/exec?'
 async function fetchActivities(param: String) {
@@ -20,13 +20,13 @@ export const useMainStore = defineStore('main', () => {
     const isLoading = ref(true)
     const activities = ref([])
     const rpgs = ref([])
-    const tournamentExtraInfo= ref(null)
+    const tournamentExtraInfo: Ref<AdditionalContent>= ref({})
 
-    function setTournamentInfo(identifier: string | null) {
+    function setTournamentInfo(identifier: AllowedKeys | null) {
         if (!identifier){
-            tournamentExtraInfo.value = null
+            tournamentExtraInfo.value = {}
         }
-        else if (EXTRAINFOS_KEYS.includes(identifier)) {
+        else {
             tournamentExtraInfo.value = EXTRAINFOS[identifier]
         }
     }
@@ -62,7 +62,7 @@ export const useMainStore = defineStore('main', () => {
         isLoading.value = false
     }
 
-    function getActivities(): Object[] {
+    function getActivities(): ActivityObject[] {
         if (page.value === 'events') {
             return activities.value
         }

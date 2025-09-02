@@ -1,6 +1,9 @@
 export const PAGES = ["home", "events", "rpg", "info", "volunteer"]
+
+export type AllowedKeys = 'one_piece_format' | 'one_piece_prize' | 'mtg_legacy_format' | 'mtg_legacy_prize' | 'mtg_night_format' | 'mtg_night_prize'
+
 export const EXTRAINFOS = {
-    "one_piece_format": {
+    one_piece_format: {
         title: "Format du tournoi",
         content: [
             "Ronde suisse suivie d'un Top Cut avec les 8 meilleurs joueurs",
@@ -9,7 +12,7 @@ export const EXTRAINFOS = {
             "Les 8 meilleurs joueurs repartiront avec des récompenses supplémentaires !",
         ],
     },
-    "one_piece_prize": {
+    one_piece_prize: {
         title: "Récompenses",
         prizes: {
             "Dès 24 Participants": [
@@ -28,15 +31,27 @@ export const EXTRAINFOS = {
                 "Partage de boosters supplémentaires selon le nombre de participants."
             ],
         }
-    }, "mtg_legacy_format": {
+    }, mtg_legacy_format: {
 
-    }, "mtg_legacy_prize": {
+    }, mtg_legacy_prize: {
 
-    }, "mtg_night_format": {
+    }, mtg_night_format: {
 
-    }, "mtg_night_prize": {
+    }, mtg_night_prize: {
 
     }
 
 }
-export const EXTRAINFOS_KEYS = Object.keys(EXTRAINFOS)
+
+export type ActivityObject = {
+    title?: string,
+    description?: string,
+    show_event?: string
+}
+
+export type AdditionalContent = {
+    title?: string,
+    content?: String[],
+    prizes?: {
+    }
+}

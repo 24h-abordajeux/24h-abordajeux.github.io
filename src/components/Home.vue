@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useMainStore } from '../store/main.store';
-import AdditionalInfoCard from './AdditionalInfoCard.vue';
 
 const mainStore = useMainStore()
 

@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { useMainStore } from '../store/main.store';
 import { computed, ref, watch } from 'vue';
 import AdditionalInfoCard from './AdditionalInfoCard.vue';
+import type { AllowedKeys } from '../utils/config';
 const mainStore = useMainStore()
 const popupInfo = computed(() => mainStore.tournamentExtraInfo)
 const wasClickedHere = ref(false)
@@ -16,12 +17,12 @@ const {activity} = defineProps({
 })
 
 function showExtraInfo(identifier: string){
-    mainStore.setTournamentInfo(identifier)
+    mainStore.setTournamentInfo(identifier as AllowedKeys)
     wasClickedHere.value = true
 }
 
 watch(popupInfo, () => {
-    wasClickedHere.value = !!popupInfo.value
+    wasClickedHere.value = !!popupInfo.value.title
 })
 </script>
 
