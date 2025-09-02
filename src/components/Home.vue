@@ -18,20 +18,20 @@ function goTo(page: string) {
     </div>
     <div class="home">
         Vous trouverez ici des informations sur les activités que nous vous proposerons tout
-        au long de l'événement, qu'il s'agisse de nos 
-        <span class="fake_link" @click="goTo('rpg')">tables de jeux de rôles</span> ou de nos 
+        au long de l'événement, qu'il s'agisse de nos
+        <span class="fake_link" @click="goTo('rpg')">tables de jeux de rôles</span> ou de nos
         <span class="fake_link" @click="goTo('events')">tournois et jeux plus classiques</span>,
         vous devriez trouver une table prête à lancer une partie qui vous intéresse. Les inscriptions
         ne sont pas encore ouvertes pour toutes les activités, mais cela devrait changer dans les prochains jours.
     </div>
     <div class="home">
-        Si vous souhaitez venir, vous trouverez toutes les 
+        Si vous souhaitez venir, vous trouverez toutes les
         <span class="fake_link" @click="goTo('info')">informations ici</span>, et si d'aventure vous aimeriez
         rejoindre l'équipage en tant que <span class="fake_link" @click="goTo('volunteer')">bénévole</span> pour
         quelques heures, sachez que vous aurez toute notre reconnaissance.
     </div>
     <div class="home">
-        L'association À L'ABORDAJEUX se réjouit d'ores et déjà de vous retrouver à la cité des étudiants, à Neuchâtel. 
+        L'association À L'ABORDAJEUX se réjouit d'ores et déjà de vous retrouver à la cité des étudiants, à Neuchâtel.
     </div>
 </template>
 

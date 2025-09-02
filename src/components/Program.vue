@@ -4,7 +4,7 @@ import Event from "./Event.vue";
 import { useMainStore } from "../store/main.store";
 
 const mainStore = useMainStore()
-const events = computed(() => mainStore.getEvents())
+const events = computed(() => mainStore.getEvents().filter((event) => event.show_event))
 
 </script>
 
@@ -12,8 +12,8 @@ const events = computed(() => mainStore.getEvents())
     <div class="forceflex" :style="`height: ${(events.length - 1 * 30)}vh;`">
 
     <div v-for="(event,index) in events" :class="`program ${index%2 ? 'even' : 'odd'}`">
-        <Event :event="event" :index="index"></Event> 
-        
+        <Event :event="event" />
+
     </div>
     </div>
 </template>

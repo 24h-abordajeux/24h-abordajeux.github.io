@@ -1,43 +1,44 @@
 <script setup lang="ts">
-import { defineProps } from 'vue';
+import AdditionalInfo from './AdditionalInfo.vue';
 
 
 defineProps({
     event: {
         type: Object,
         default: {},
-    },
-    index: {
-        type: Number,
-        default: 0,
-    },
+    }
 })
 
 </script>
 <template>
+
     <div class="event_title">{{ event.title }}</div>
-        <div :class="`flexrow ${index%2 ? 'even' : 'odd'}`">
-        <div class="event_description">{{ event.description }}</div>
-        </div>
-            <div class="event_infos" v-if="event.link">
-                <a :href="event.link" target="_blank" v-if="event.show_link"><button>{{ event.link_text }}</button></a>
-                <span class="gras" v-if="event.show_subscribed && event.max - event.subscribed > 0"> {{ event.max- event.subscribed }} places restantes</span> <!-- TODO: events.participants to retrieve from internet-->
-                <span class="gras" v-else-if="event.show_subscribed">Complet</span> <!-- TODO: events.participants to retrieve from internet-->
-                <a :href="event.poster" v-if="event.poster" target="_blank"><button>Voir l'Affiche</button></a>
-                <a :href="event.prize_wall" v-if="event.prize_wall" target="_blank"><button>Voir le Prize Wall</button></a>
-            </div>
+    <div class="event_subtitle" v-if="event.game_name">Jeu: {{ event.game_name }}</div>
+    <div class="event_description">{{ event.description }}</div>
+    <AdditionalInfo :event="event"/>
 </template>
 <style lang="scss">
 
 .event_title {
     margin-top: 2px;
-    font-weight: 600;
+    font-weight: 800;
     font-size: large;
 }
+.event_subtitle {
+    margin-top: 2px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: medium;
+}
+
 .event_description {
-    width: 100%;
-    margin-bottom: 2px;
+
+    margin-bottom: 1vh;
     overflow-y: auto;
+    overflow-x: auto;
+    text-align: justify;
+    margin-left: 1vw;
+    margin-right: 1vw;
 }
 .gras {
     font-weight: 600;

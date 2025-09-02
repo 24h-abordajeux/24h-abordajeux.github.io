@@ -1,13 +1,5 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue';
-/*
-
-TODO CHOISIR : loading on startup et charger une fois le JSON, ou recharger le JSON à chaque fois
-
-
-
-
-*/
 
 const scriptUrl = 'https://script.google.com/macros/s/AKfycbzeX6JzaymaT_ApdxDNRO7BCpX2JUkofyQQH-cyR4MdsnSOK27__fB37YZC2P-YVQeytw/exec?'
 async function fetchEvents(param: String) {
@@ -16,7 +8,7 @@ async function fetchEvents(param: String) {
             .catch(responseJson => {
                 console.log("Could not get response from url:", responseJson);
                 return {values: ["shifted"]};
-            }) 
+            })
         return promise
     }
 
@@ -29,7 +21,7 @@ export const useMainStore = defineStore('main', () => {
     const isLoading = ref(true)
     const events = ref([])
     const rpgs = ref([])
-    
+
     function changePage(newPage: string) {
         if (PAGES.includes(newPage) && page.value !== newPage) {
             page.value = newPage
@@ -49,9 +41,9 @@ export const useMainStore = defineStore('main', () => {
                 events.value = value}
             else if (page === 'rpg') {
                 rpgs.value = value
-            }    
+            }
         })
-        
+
 
     }
 
@@ -61,7 +53,7 @@ export const useMainStore = defineStore('main', () => {
         isLoading.value = false
     }
 
-    function getEvents() {
+    function getEvents(): [] {
         if (page.value === 'events') {
             return events.value
         }
