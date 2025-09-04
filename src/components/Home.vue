@@ -22,7 +22,7 @@ function goTo(page: string) {
         <span class="fake_link" @click="goTo('rpg')">tables de jeux de rôles</span> ou de nos
         <span class="fake_link" @click="goTo('events')">tournois et jeux plus classiques</span>,
         vous devriez trouver une table prête à lancer une partie qui vous intéresse. Les inscriptions
-        ne sont pas encore ouvertes pour toutes les activités, mais cela devrait changer dans les prochains jours.
+        sont ouvertes pour la plupart des activités.
     </div>
     <div class="home">
         Si vous souhaitez venir, vous trouverez toutes les
