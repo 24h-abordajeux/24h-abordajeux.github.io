@@ -37,7 +37,7 @@ export const EXTRAINFOS = {
         content: [
             "Le tournoi est un legacy SUL Regional",
             "REL: Competitive et decklist requise",
-            "Ronde suisse suivie d'un Top 8",
+            "Rondes suisse suivies d'un Top 8",
             "Maximum 64 joueurs",
             "Proxies autorisés",
             "Frais d'inscriptions de 30 CHF, entrée aux 24h du jeu incluse"
@@ -63,7 +63,7 @@ export const EXTRAINFOS = {
     }, mtg_night_format: {
         title: "Informations supplémentaires",
         content: [
-            "Le draft se fera avec les trois éditions suivantes : Innistrad Remastered, Duskmourne et Murders at Karlov's manor",
+            "Le draft se fera avec les trois éditions suivantes : Innistrad Remastered, Duskmourn et Murders at Karlov Manor",
             "Les cartes seront en anglais",
             "3 rondes suisses",
             "Prix de l'inscription de 20 CHF, entrée aux 24h du jeu non-incluse"
