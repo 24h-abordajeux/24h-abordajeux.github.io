@@ -35,7 +35,7 @@ export const EXTRAINFOS = {
     }, mtg_legacy_format: {
         title: "Informations supplémentaires",
         content: [
-            "Le tournoi est un legacy SUL regular",
+            "Le tournoi est un legacy SUL Regional",
             "REL: Competitive et decklist requise",
             "Ronde suisse suivie d'un Top 8",
             "Maximum 64 joueurs",
