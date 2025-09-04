@@ -30,13 +30,36 @@ export const EXTRAINFOS = {
             "Top 3 à 8": [
                 "Partage de boosters supplémentaires selon le nombre de participants."
             ],
+            "Chaque participant":["3 boosters PRB02 et 1 booster promo."],
         }
     }, mtg_legacy_format: {
+        title: "Informations supplémentaires",
+        content: [
+            "Le tournoi est un SUL regular",
+            "REL: Competitive et decklist requise",
+            "Ronde suisse suivie d'un Top 8",
+            "Maximum 64 joueurs",
+            "Proxies autorisés",
+            "Prize wall garanti jusqu'à 32 participants, et plus de prix si on dépasse",
+            "Frais d'inscriptions de 30 CHF, entrée aux 24h du jeu incluse"
+        ]
 
     }, mtg_legacy_prize: {
-
+        title: "Récompenses",
+        prizes: {
+            "Garanti": [
+                "1er: Un truc",
+                "2eme: Un autre truc",
+                "3-4: c'est pas mal ça",
+                "5-8: un peu moins bien",
+                "9-12: c'est le geste qui compte",
+            ],
+            "Plus ?": [
+                "Chaque entrée, c'est du budget pour des prix en plus :3"
+            ]
+        }
     }, mtg_night_format: {
-
+        title: "Informations supplémentaires"
     }, mtg_night_prize: {
 
     }

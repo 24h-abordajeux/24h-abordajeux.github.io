@@ -17,7 +17,7 @@ function close() {
         <div class="title"><div class="internal"> {{ infoDisplayed?.title }} </div><div><button class="close" @click="close()"><FontAwesomeIcon :icon="faClose" size="xl"/></button></div></div>
         <div class="content" v-for="value in infoDisplayed?.content"><FontAwesomeIcon :icon="faCircle" size="2xs" /> {{ value }}</div>
         <div class="content prizes" v-for="prize, key in infoDisplayed?.prizes">
-            <div class="gras"><FontAwesomeIcon :icon="faGem" />{{ key }}</div>
+            <div class="gras"><FontAwesomeIcon :icon="faGem" size="xs" /><span>{{ key }}</span></div>
             <div v-for="value in prize" class="prizepool"> {{ value }}</div>
         </div>
     </div>
@@ -45,6 +45,10 @@ function close() {
     width: 100%;
     background-color: rgba(8, 3, 133, 0.4);
     margin-bottom: 1vh;
+}
+.gras > span {
+    margin-left: 0.5vw;
+    font-weight: 600;
 }
 .internal{
     text-align: left;

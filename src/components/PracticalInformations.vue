@@ -25,18 +25,18 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
                     <FontAwesomeIcon :icon="faTriangleExclamation" /> L'événement est cashless.
                 </li>
                 <li>
-                    Adultes : <span class="right-align mg-r-2">15 CHF par personne</span> 
+                    <span class="gras">Adultes: </span><span class="right-align mg-r-2">15 CHF par personne</span> 
                 </li>
                 <li>
-                    AI / AVS / Chômeurs / Etudiants: <span class="right-align mg-r-2">10 CHF par personne</span>
+                    <span class="gras">AI / AVS / Chômeurs / Etudiants: </span><span class="right-align mg-r-2">10 CHF par personne</span>
                 </li>
                 <li>
-                    Enfants entre 8 et 16 ans / membres de À L'ABORDAJEUX: <span class="right-align mg-r-2">8 CHF par personne</span>
+                    <span class="gras">Enfants entre 8 et 16 ans / membres de À L'ABORDAJEUX: </span><span class="right-align mg-r-2">8 CHF par personne</span>
                 </li>
                 <li>
-                    Enfants plus jeunes: Gratuit
+                    <span class="gras">Enfants plus jeunes:</span><span class="right-align mg-r-2"> Gratuit</span>
                 </li>
-                <li>Les mineurs restent sous la responsabilité de leurs parents pendant l'ensemble de l'événement.</li>
+                <li class="gras mg-r-2">Les mineurs restent sous la responsabilité de leurs parents pendant l'ensemble de l'événement.</li>
             </ul>
              <div class="subtitle">Manger et Boire pendant l'événement</div>
             <div class="left-align mg-l-2">
@@ -55,6 +55,9 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 </template>
 
 <style lang="scss" scoped>
+.gras {
+    font-weight: 800;
+}
 .left-align {
     text-align: left;
 }
@@ -70,6 +73,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 .informations {
     color: white;
     width:100%;
+
 }
 .textual-informations {
     height: fit-content;
