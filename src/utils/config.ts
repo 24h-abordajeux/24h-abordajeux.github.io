@@ -66,15 +66,14 @@ export const EXTRAINFOS = {
             "Le draft se fera avec les trois éditions suivantes : Innistrad Remastered, Duskmourn et Murders at Karlov Manor",
             "Les cartes seront en anglais",
             "3 rondes suisses",
-            "Prix de l'inscription de 20 CHF, entrée aux 24h du jeu non-incluse"
+            "Prix de l'inscription de 20 CHF, entrée aux 24h du jeu non-incluse",
         ]
     }, mtg_night_prize: {
         title: "Récompenses",
         prizes: {
             "À Répartir": [
-                "3 boosters Innistrad Remastered, 3 boosters duskmourne, 2 boosters Murder at Karlov's Manor",
+                "8 boosters issus des éditions Innistrad Remastered, duskmourn et Murder at Karlov Manor",
                 "Chaque participant repart avec un de ces booster",
-                "Pick order des boosters selon le classement du draft"
             ]
         }
     }
