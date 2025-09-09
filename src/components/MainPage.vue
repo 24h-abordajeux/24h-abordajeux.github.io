@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onBeforeMount, ref } from 'vue'
+import { computed, onBeforeMount, ref, watch } from 'vue'
 import Header from './Header.vue'
 import Footer from './Footer.vue'
 import Program from './Program.vue'
@@ -14,8 +14,14 @@ const page = computed(() => mainStore.page)
 const isMobile = ref(window.screen.height > window.screen.width)
 onBeforeMount(() => {
   mainStore.initActivities()
-})
+  if(window.location.hash) {
+    mainStore.changePage(window.location.hash.replace('#',''))
+  }
 
+})
+watch(page, () => {
+  window.location.hash = page.value
+})
 </script>
 
 <template>

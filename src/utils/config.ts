@@ -1,5 +1,4 @@
 export const PAGES = ["home", "events", "rpg", "info", "volunteer"]
-
 export type AllowedKeys = 'one_piece_format' | 'one_piece_prize' | 'mtg_legacy_format' | 'mtg_legacy_prize' | 'mtg_night_format' | 'mtg_night_prize'
 
 export const EXTRAINFOS = {
@@ -10,6 +9,7 @@ export const EXTRAINFOS = {
             "Maximum 64 joueurs",
             "Chaque participant reçoit 3 boosters PRB02 et 1 booster promo",
             "Les 8 meilleurs joueurs repartiront avec des récompenses supplémentaires !",
+            "Entrée aux 24h incluse dans le coût de l'inscription",
         ],
     },
     one_piece_prize: {
@@ -83,7 +83,7 @@ export const EXTRAINFOS = {
 export type ActivityObject = {
     title?: string,
     description?: string,
-    show_event?: string
+    show_event?: boolean
 }
 
 export type AdditionalContent = {
@@ -91,4 +91,10 @@ export type AdditionalContent = {
     content?: String[],
     prizes?: {
     }
+}
+
+export const placeHolderActivity: ActivityObject = {
+    title: "Le programme est en cours de chargement",
+    description: "Le programme des activités sera disponible d'ici quelques secondes, merci de ne pas recharger la page",
+    show_event: true,
 }
