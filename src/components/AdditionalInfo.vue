@@ -39,7 +39,7 @@ watch(popupInfo, () => {
     <div class="grid_1_x_2" v-if="activity.show_subscribed || activity.show_link">
         <div class="box left" v-if="activity.show_subscribed"><FontAwesomeIcon :icon="faPeopleGroup" /> {{ activity.max - activity.subscribed === 0 ? ': Complet': activity.max - activity.subscribed + ' places restantes'}}</div>
         <div class="box" v-else></div>
-        <div class="box right" v-if="activity.show_link"><a :href="activity.link" target="_blank"><FontAwesomeIcon :icon="faPenFancy"/> {{ activity.link_text }}</a></div>
+        <div class="box right" v-if="activity.show_link && activity.max - activity.subscribed > 0"><a :href="activity.link" target="_blank"><FontAwesomeIcon :icon="faPenFancy"/> {{ activity.link_text }}</a></div>
         <div class="box" v-else></div>
     </div>
     <div class="grid_1_x_2" v-if="activity.card_game_identifier && activity.show_format || activity.show_prize">

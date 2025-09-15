@@ -7,6 +7,8 @@ function goTo(page: string) {
     mainStore.changePage(page)
 }
 
+// TODO : AFFICHE LES LOGOS CONNARD !
+
 
 </script>
 
@@ -33,6 +35,14 @@ function goTo(page: string) {
     <div class="home">
         L'association À L'ABORDAJEUX se réjouit d'ores et déjà de vous retrouver à la cité des étudiants, à Neuchâtel.
     </div>
+    <div class="title">Avec l'aimable soutien de:</div>
+    <div class="sponsors">
+        <a href="https://www.ornithorynque.ch" target="_blank"><img class="logo" src="/src/assets/ornithorynque.png"/></a>
+        <a href="https://www.neuchatelville.ch/sortir-et-decouvrir/agenda/" target="_blank"><img class="logo" src="/src/assets/ville_neuchatel_noir.png"/></a>
+        <a href="mailto:valimpressions@bluewin.ch" target="_blank"><img clss="logo" src="/src/assets/val_impression_logo.png"/></a>
+        <a href="https://aumoka.ch/fr/" target="_blank"><img class="logo" src="/src/assets/au_moka_logo.png"/></a>
+        <!-- spot for ludesco. Grain d'orge ? Boulangerige ? --->
+    </div>
 </template>
 
 <style lang="scss" scoped>
@@ -43,12 +53,34 @@ function goTo(page: string) {
         flex-grow: 1;
 
 }
+.logo {
+    max-width: 10vw;
+    object-fit: cover;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+.title {
+    color: aliceblue;
+    text-align: center;
+    font-size: large;
+    font-weight: 800;
+}
 .home {
     color: aliceblue;
     margin-left: 3vw;
     margin-right: 3vw;
     margin-top: 1vh;
     text-align: justify;
+}
+.sponsors {
+
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-top: 1vh;
+    border: ridge;
+    border-color: brown;
+
+    background-color: rgba(255,255,255,0.6);
 }
 .fake_link {
     color: #f3d31f;

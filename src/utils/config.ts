@@ -46,19 +46,21 @@ export const EXTRAINFOS = {
     }, mtg_legacy_prize: {
         title: "Récompenses",
         prizes: {
-            "32 joueurs ou moins": [
-                "1er: Un truc",
-                "2eme: Un autre truc",
-                "3-4: c'est pas mal ça",
-                "5-8: un peu moins bien",
-                "9-12: c'est le geste qui compte",
+            "À 16 joueurs": [
+                "1er: 8 Fetch lands",
+                "2ème: Chrome Mox",
+                "3ème et 4ème: Scalding Tarn zendikar",
+                "5ème à 8ème: Un Fetch Land"
             ],
-            "48 joueurs": [
-                "Chaque entrée, c'est du budget pour des prix en plus :3"
+            "À 32 joueurs" :[
+                "1er: 1 Plateau",
+                "2ème: 1 Boseiju, Who Endures et 1 Chrome Mox",
+                "3ème et 4ème: Lotus Petal from the vault",
+                "5ème à 8ème: 2 Fetch Lands"
             ],
-            "64 joueurs": [
-                "ça se voit que c'est pas encore défini ?"
-            ]
+            "À 48 ou 64 joueurs": [
+                "Nous sommes en train de préparer les récompenses pour ces paliers, plus d'informations plus tard"
+            ],
         }
     }, mtg_night_format: {
         title: "Informations supplémentaires",
