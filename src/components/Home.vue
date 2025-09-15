@@ -39,7 +39,7 @@ function goTo(page: string) {
     <div class="sponsors">
         <a href="https://www.ornithorynque.ch" target="_blank"><img class="logo" src="/src/assets/ornithorynque.png"/></a>
         <a href="https://www.neuchatelville.ch/sortir-et-decouvrir/agenda/" target="_blank"><img class="logo" src="/src/assets/ville_neuchatel_noir.png"/></a>
-        <a href="mailto:valimpressions@bluewin.ch" target="_blank"><img clss="logo" src="/src/assets/val_impression_logo.png"/></a>
+        <!-- <a href="mailto:valimpressions@bluewin.ch" target="_blank"><img clss="logo" src="/src/assets/val_impression_logo.png"/></a> TODO : mise en page du logo pour qu'il ne bouffe pas tous les autres-->
         <a href="https://aumoka.ch/fr/" target="_blank"><img class="logo" src="/src/assets/au_moka_logo.png"/></a>
         <!-- spot for ludesco. Grain d'orge ? Boulangerige ? --->
     </div>
