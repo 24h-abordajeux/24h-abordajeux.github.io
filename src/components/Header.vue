@@ -15,6 +15,7 @@ function goTo(page: string) {
 function buttonSize() {
     return window.screen.width < 600 || window.screen.height < 600 ? "1x": "2x"
 }
+
 </script>
 
 
@@ -36,7 +37,7 @@ function buttonSize() {
             /></button>
             <button @click="goTo('info')" style="larger"><FontAwesomeIcon :icon="faCircleInfo" :size="buttonSize()"/></button>
             <button @click="goTo('volunteer')"><FontAwesomeIcon :icon="faHandshakeAngle" :size="buttonSize()"/></button>
-        </div>   
+        </div>
     </div>
 </template>
 

@@ -4,9 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { useMainStore } from '../store/main.store';
 import { computed, ref, watch } from 'vue';
 import AdditionalInfoCard from './AdditionalInfoCard.vue';
-import type { AllowedKeys } from '../utils/config';
+import { type AllowedKeys } from '../utils/config';
 const mainStore = useMainStore()
 const popupInfo = computed(() => mainStore.tournamentExtraInfo)
+const isLoading = computed(() => mainStore.isLoading)
+const currentPage = computed(() => mainStore.page)
 const wasClickedHere = ref(false)
 
 const {activity} = defineProps({
@@ -24,6 +26,13 @@ function showExtraInfo(identifier: string){
 watch(popupInfo, () => {
     wasClickedHere.value = !!popupInfo.value.title
 })
+
+function getLink() {
+    if (isLoading.value) {
+        return currentPage.value === 'events' ? "https://drive.google.com/file/d/1P-sD3zx72Huov6kxceWGf3UErAnGIQ9G/view?usp=sharing" : "https://drive.google.com/file/d/1hjokg1OgBmcqXI6gwfj6E4N_QPrv6IAP/view?usp=sharing"
+    }
+    return activity.link
+}
 </script>
 
 <template>
@@ -39,7 +48,9 @@ watch(popupInfo, () => {
     <div class="grid_1_x_2" v-if="activity.show_subscribed || activity.show_link">
         <div class="box left" v-if="activity.show_subscribed"><FontAwesomeIcon :icon="faPeopleGroup" /> {{ activity.max - activity.subscribed === 0 ? ': Complet': activity.max - activity.subscribed + ' places restantes'}}</div>
         <div class="box" v-else></div>
-        <div class="box right" v-if="activity.show_link && activity.max - activity.subscribed > 0"><a :href="activity.link" target="_blank"><FontAwesomeIcon :icon="faPenFancy"/> {{ activity.link_text }}</a></div>
+        <div class="box right" v-if="activity.show_link && activity.max - activity.subscribed > 0">
+            <a :href="getLink()" target="_blank"><FontAwesomeIcon :icon="faPenFancy"/> {{ activity.link_text }}</a>
+        </div>
         <div class="box" v-else></div>
     </div>
     <div class="grid_1_x_2" v-if="activity.card_game_identifier && activity.show_format || activity.show_prize">

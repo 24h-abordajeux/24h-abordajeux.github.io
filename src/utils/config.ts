@@ -47,20 +47,28 @@ export const EXTRAINFOS = {
         title: "Récompenses",
         prizes: {
             "À 16 joueurs": [
-                "1er: 8 Fetch lands",
-                "2ème: Chrome Mox",
-                "3ème et 4ème: Scalding Tarn zendikar",
-                "5ème à 8ème: Un Fetch Land"
+                "1er: 6 Fetch lands",
+                "2ème: Boseiju Who Endures (Extra V1)",
+                "3ème et 4ème: 2 Fetch lands chacun",
+                "5ème à 8ème: 1 Fetch land bleu chacun"
             ],
             "À 32 joueurs" :[
                 "1er: 1 Plateau",
-                "2ème: 1 Boseiju, Who Endures et 1 Chrome Mox",
-                "3ème et 4ème: Lotus Petal from the vault",
-                "5ème à 8ème: 2 Fetch Lands"
+                "2ème: 1 Boseiju, Who Endures (extra V1) et 1 Chrome Mox",
+                "3ème et 4ème: Lotus Petal from the vault chacun",
+                "5ème à 8ème: 2 Fetch Lands chacun"
             ],
-            "À 48 ou 64 joueurs": [
-                "Nous sommes en train de préparer les récompenses pour ces paliers, plus d'informations plus tard"
+            "À 48 joueurs": [
+                "1er: Mox Diamond",
+                "2ème: 10 Fetch lands",
+                "3ème et 4ème: Lotus Petal from the vault et 1 fetch land chacun",
+                "5ème à 8ème: 2 Fetch lands bleus chacun"
             ],
+            "À 64 joueurs": [
+                "1er: Mox Diamond et Ancient Tomb lord of the ring",
+                "2ème: Serra's sanctum",
+                "3ème et 4ème: 2 Lotus Petal from the vault chacun",
+                "5ème à 8ème: 3 Fetch lands chacun"],
         }
     }, mtg_night_format: {
         title: "Informations supplémentaires",
@@ -86,6 +94,12 @@ export type ActivityObject = {
     title?: string,
     description?: string,
     show_event?: boolean
+    show_link?: boolean
+    link_text?: string
+    link?: string
+    max?: number
+    subscribed? : number
+    isDownload?: boolean
 }
 
 export type AdditionalContent = {
@@ -99,4 +113,13 @@ export const placeHolderActivity: ActivityObject = {
     title: "Le programme est en cours de chargement",
     description: "Le programme des activités sera disponible d'ici quelques secondes, merci de ne pas recharger la page",
     show_event: true,
+    show_link : true,
+    link_text: "voir le programme",
+    max: 300,
+    subscribed: 0,
+    isDownload: true
 }
+export interface ProcessEnv {
+    [key: string]: string | undefined
+}
+export const publicPath = import.meta.env.BASE_URL
