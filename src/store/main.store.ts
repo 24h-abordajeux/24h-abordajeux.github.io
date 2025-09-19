@@ -85,6 +85,7 @@ export const useMainStore = defineStore('main', () => {
         changePage,
         becomeVolunteer,
         setTournamentInfo,
+        refreshactivities,
     }
 
 })
