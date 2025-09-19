@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, onMounted, onUnmounted, ref, type Ref } from "vue";
 import Activity from "./Activity.vue";
 import { useMainStore } from "../store/main.store";
 import { placeHolderActivity } from "../utils/config";
@@ -7,6 +7,13 @@ import { placeHolderActivity } from "../utils/config";
 const mainStore = useMainStore()
 const activities = computed(() => mainStore.getActivities()?.filter((activity) => activity?.show_event))
 const isLoading = computed(() => mainStore.isLoading)
+const currentPage = computed(() => mainStore.page)
+const interval: Ref<NodeJS.Timeout | undefined> = ref(undefined)
+
+onMounted(() =>  interval.value = setInterval(mainStore.refreshactivities, 30000, currentPage.value)
+)
+onUnmounted(() => clearInterval(interval.value))
+
 </script>
 
 <template>
