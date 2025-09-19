@@ -7,9 +7,6 @@ function goTo(page: string) {
     mainStore.changePage(page)
 }
 
-// TODO : AFFICHE LES LOGOS CONNARD !
-
-
 </script>
 
 <template>
@@ -37,10 +34,12 @@ function goTo(page: string) {
     </div>
     <div class="title">Avec l'aimable soutien de:</div>
     <div class="sponsors">
-        <a href="https://www.ornithorynque.ch" target="_blank"><img class="logo" src="/src/assets/ornithorynque.png"/></a>
-        <a href="https://www.neuchatelville.ch/sortir-et-decouvrir/agenda/" target="_blank"><img class="logo" src="/src/assets/ville_neuchatel_noir.png"/></a>
-        <a href="mailto:valimpressions@bluewin.ch" target="_blank"><img clss="logo" src="/src/assets/val_impression_logo.png"/></a>
-        <a href="https://aumoka.ch/fr/" target="_blank"><img class="logo" src="/src/assets/au_moka_logo.png"/></a>
+        <div>
+            <a href="https://www.ornithorynque.ch" target="_blank"><img class="logo" src="/src/assets/ornithorynque.png"/></a>
+            <a href="https://www.neuchatelville.ch/sortir-et-decouvrir/agenda/" target="_blank"><img class="logo" src="/src/assets/ville_neuchatel_noir.png"/></a>
+            <a href="https://aumoka.ch/fr/" target="_blank"><img class="logo" src="/src/assets/au_moka_logo.png"/></a>
+            <a href="mailto:valimpressions@bluewin.ch" target="_blank"><img class="logo" src="/src/assets/val_impression_logo.png"/></a>
+        </div>
         <!-- spot for ludesco. Grain d'orge ? Boulangerige ? --->
     </div>
 </template>
@@ -54,7 +53,8 @@ function goTo(page: string) {
 
 }
 .logo {
-    max-width: 10vw;
+    max-height: 256px;
+    max-width: 256px;
     object-fit: cover;
     margin-left: 1vw;
     margin-right: 1vw;
@@ -76,7 +76,9 @@ function goTo(page: string) {
 
     margin-left: 3vw;
     margin-right: 3vw;
-    margin-top: 1vh;
+    margin-top: 2vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
     border: ridge;
     border-color: brown;
     background-color: rgba(255,255,255,0.6);

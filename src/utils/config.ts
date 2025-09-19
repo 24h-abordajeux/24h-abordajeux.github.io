@@ -99,7 +99,6 @@ export type ActivityObject = {
     link?: string
     max?: number
     subscribed? : number
-    isDownload?: boolean
 }
 
 export type AdditionalContent = {
@@ -117,7 +116,6 @@ export const placeHolderActivity: ActivityObject = {
     link_text: "voir le programme",
     max: 300,
     subscribed: 0,
-    isDownload: true
 }
 export interface ProcessEnv {
     [key: string]: string | undefined
