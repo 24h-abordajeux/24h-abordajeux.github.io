@@ -1,46 +1,28 @@
 <script setup lang="ts">
-import { useMainStore } from '../store/main.store';
-
-const mainStore = useMainStore()
-
-function goTo(page: string) {
-    mainStore.changePage(page)
-}
 
 </script>
 
 <template>
-    <div class="home">
-        Mesdames, Messieurs, l'association À L'ABORDAJEUX a le plaisir de vous convier aux 24h du jeu.
-        Que vous soyez des joueur·euse·s confirmé·e·s ou des novices en quête d'une activité
-        pour le week end du 4 au 5 octobre, vous êtes les bienvenu·e·s parmi nous.
+    <div class="title">
+        MERCI À TOUS
     </div>
     <div class="home">
-        Vous trouverez ici des informations sur les activités que nous vous proposerons tout
-        au long de l'événement, qu'il s'agisse de nos
-        <span class="fake_link" @click="goTo('rpg')">tables de jeux de rôles</span> ou de nos
-        <span class="fake_link" @click="goTo('events')">tournois et jeux plus classiques</span>,
-        vous devriez trouver une table prête à lancer une partie qui vous intéresse. Les inscriptions
-        sont ouvertes pour la plupart des activités.
+        Les 24h du jeu se sont terminés, et nous sommes heureux d'avoir pu vous accueillir. Il ne nous reste que deux petites choses à vous demander.
+    </div>
+    <div class="title">
+        Donnez votre avis
     </div>
     <div class="home">
-        Si vous souhaitez venir, vous trouverez toutes les
-        <span class="fake_link" @click="goTo('info')">informations ici</span>, et si d'aventure vous aimeriez
-        rejoindre l'équipage en tant que <span class="fake_link" @click="goTo('volunteer')">bénévole</span> pour
-        quelques heures, sachez que vous aurez toute notre reconnaissance.
+        Nous avons fait de notre mieux, mais nous sommes certains que nous pouvons faire mieux. Aussi, nous vous invitons à laisser un avis (et vos remarques)
+        sur l'organisation et le déroulement de l'événement.
+    </div>
+    <div class="title"><button> <a href="https://forms.gle/Acyo2XKSGPVqrzp28" target="_blank">Donnez votre Avis</a></button></div>
+    <div class="title">
+        Avez vous perdu quelque chose ?
     </div>
     <div class="home">
-        L'association À L'ABORDAJEUX se réjouit d'ores et déjà de vous retrouver à la cité des étudiants, à Neuchâtel.
-    </div>
-    <div class="title">Avec l'aimable soutien de:</div>
-    <div class="sponsors">
-        <div>
-            <a href="https://www.ornithorynque.ch" target="_blank"><img class="logo" src="/src/assets/ornithorynque.png"/></a>
-            <a href="https://www.neuchatelville.ch/sortir-et-decouvrir/agenda/" target="_blank"><img class="logo" src="/src/assets/ville_neuchatel_noir.png"/></a>
-            <a href="https://aumoka.ch/fr/" target="_blank"><img class="logo" src="/src/assets/au_moka_logo.png"/></a>
-            <a href="mailto:valimpressions@bluewin.ch" target="_blank"><img class="logo" src="/src/assets/val_impression_logo.png"/></a>
-        </div>
-        <!-- spot for ludesco. Grain d'orge ? Boulangerige ? --->
+        Si vous avez perdu un objet durant les 24h, n'hésitez pas à nous <a href="mailto:association.alabordajeux@gmail.com?subject='Objet perdu lors des 24h du jeu'" target="_blank">contacter</a>
+.
     </div>
 </template>
 

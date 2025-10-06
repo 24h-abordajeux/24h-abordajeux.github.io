@@ -15,7 +15,7 @@ const isMobile = ref(window.screen.height > window.screen.width)
 onBeforeMount(() => {
   mainStore.initActivities()
   if(window.location.hash) {
-    mainStore.changePage(window.location.hash.replace('#',''))
+    //mainStore.changePage(window.location.hash.replace('#',''))
   }
 
 })
